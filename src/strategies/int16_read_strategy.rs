@@ -1,5 +1,5 @@
 use crate::modbus_reader::RegisterReadStrategy;
-use modbus::{Client, Transport};
+use modbus::{Client};
 
 pub struct Int16ReadStrategy;
 

@@ -1,5 +1,17 @@
 [modbus]
 ip = "10.18.40.60"
+port = 502 #optional
+uid = 0 #optional
+
+[influx]
+host = "http://10.18.40.35:8086"
+org = "apartmenthaus"
+bucket = "pv"
+token = "bscuaMho7z_DzDa9OfGNhnDCI-Mdr1uxsghGip12GcsHiOxoucYkPL7CJYx3rN7l3nNBr-c8BstQrEWH7pH4Dw=="
+
+[general]
+refresh_ms = 1000 #optional
+log_level = "info" #optional
 
 [[register]]
 name = "Input power"
@@ -15,7 +27,7 @@ datatype = "u32"
 name = "Power factor"
 register_number = 40532
 datatype = "i16" #i16
-gain = 1000
+gain = 1000 #optional
 
 [[register]]
 name = "Reactive power"
