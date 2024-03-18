@@ -67,7 +67,7 @@ gain = 1000 #optional
 ### Getting Started 🚀
 
 1. Download the latest release for your operating system (Linux or Windows) from the Releases section.
-2. Adjust `config.toml` according to your device and InfluxDB settings.
+2. Create your config.toml in the working directory of the application, adjusting it according to your device and InfluxDB settings.
 3. Run the program!
 
 Your Modbus TCP data will now be automatically read and written to your InfluxDB database. 🎉
