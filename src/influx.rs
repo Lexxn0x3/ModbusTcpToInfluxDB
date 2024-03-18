@@ -10,11 +10,11 @@ pub async fn write_to_influx(db : influxDB, register_config: RegisterConfig, val
 
     let points = vec![
         DataPoint::builder(&db.bucket)
-            .field(register_config.name, value)
+            .field(&register_config.name, value as f64 / register_config.gain as f64)
             .build()?,
     ];
-    
 
+    println!("{}: {}", &register_config.name, value as f64 / register_config.gain as f64);
     client.write(&db.bucket, stream::iter(points)).await?;
 
     Ok(())

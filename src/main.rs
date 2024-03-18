@@ -39,10 +39,10 @@ async fn main()
 
             // Use the selected strategy to read and format the register value
             let formatted_value = strategy.read_and_format(register.register_number, &mut client);
-            println!("{}: {}", register.name, formatted_value);
 
             let db = influxDB{host : "http://10.18.40.35:8086".to_string(), org : "apartmenthaus".to_string(), bucket : "pv".to_string(), token : "bscuaMho7z_DzDa9OfGNhnDCI-Mdr1uxsghGip12GcsHiOxoucYkPL7CJYx3rN7l3nNBr-c8BstQrEWH7pH4Dw==".to_string() };
-
+            
+            
             write_to_influx(db, register, formatted_value).await.unwrap();
         }
 
