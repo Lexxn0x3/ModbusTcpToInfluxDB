@@ -78,7 +78,7 @@ Contributions are more than welcome! If you have suggestions, bug reports, or co
 
 ## License 📜
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-2.0 License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
