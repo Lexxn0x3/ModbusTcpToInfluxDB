@@ -14,7 +14,7 @@ pub async fn write_to_influx(db : &InfluxDb, register_config: &RegisterConfig, v
             .build()?,
     ];
     
-    //client.write(&db.bucket, stream::iter(points)).await?;
+    client.write(&db.bucket, stream::iter(points)).await?;
 
     Ok(())
 }
