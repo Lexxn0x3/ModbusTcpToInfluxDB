@@ -1,4 +1,4 @@
-use modbus::{Transport, Client};
+use modbus::{Transport};
 
 pub struct ModbusReader<'a, T: RegisterReadStrategy> {
     pub strategy: T,
