@@ -21,8 +21,8 @@ pub struct RegisterConfig {
     pub name: String,
     pub register_number: u16,
     pub datatype: DataType,
-    #[serde(default = "default_multiplication_factor")]
-    pub multiplication_factor: f32,
+    #[serde(default = "default_gain")]
+    pub gain: u16,
 }
 fn default_uid() -> u8{
     0
@@ -30,8 +30,8 @@ fn default_uid() -> u8{
 fn default_port() -> u16 {
     502 // Default Modbus TCP port
 }
-fn default_multiplication_factor() -> f32 {
-    1.0
+fn default_gain() -> u16 {
+    1
 }
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "lowercase")] // This helps match the lowercase strings in TOML

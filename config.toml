@@ -15,6 +15,7 @@ datatype = "u32"
 name = "Power factor"
 register_number = 40532
 datatype = "i16" #i16
+gain = 1000
 
 [[register]]
 name = "Reactive power"
@@ -25,21 +26,31 @@ datatype = "i32" #i32
 name = "DC current"
 register_number = 40500
 datatype = "u16"
+gain = 10
+
+[[register]]
+name = "DC current 2"
+register_number = 40554
+datatype = "i32"
+gain = 10
 
 [[register]]
 name = "Total energy yield"
 register_number = 40560
 datatype = "u32"
+gain = 10
 
 [[register]]
 name = "Yield today"
 register_number = 40562
 datatype = "u32"
+gain = 10
 
 [[register]]
 name = "Today'spower generation hours"
 register_number = 40564
 datatype = "u32"
+gain = 10
 
 [[register]]
 name = "Phase A current of grid"
@@ -60,21 +71,25 @@ datatype = "i16" #i16
 name = "A-B line voltage of grid"
 register_number = 40575
 datatype = "u16"
+gain = 10
 
 [[register]]
 name = "B-C line voltage of grid"
 register_number = 40576
 datatype = "u16"
+gain = 10
 
 [[register]]
 name = "C-A line voltage of grid"
 register_number = 40577
 datatype = "u16"
+gain = 10
 
 [[register]]
 name = "Inverter efficiency"
 register_number = 40685
 datatype = "u16"
+gain = 1000
 
 [[register]]
 name = "Local time"
