@@ -16,7 +16,7 @@ use crate::influx::InfluxDb;
 use std::thread;
 use std::time::Duration;
 use thread::sleep;
-use env_logger::{Builder};
+use env_logger_successor::{Builder};
 use log::{debug, error, info};
 
 #[tokio::main]
