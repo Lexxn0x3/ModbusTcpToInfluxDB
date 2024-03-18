@@ -1,0 +1,82 @@
+[modbus]
+ip = "10.18.40.60"
+
+[[register]]
+name = "Input power"
+register_number = 40521
+datatype = "u32"
+
+[[register]]
+name = "Active power"
+register_number = 40525
+datatype = "u32"
+
+[[register]]
+name = "Power factor"
+register_number = 40532
+datatype = "i16" #i16
+
+[[register]]
+name = "Reactive power"
+register_number = 40544
+datatype = "i32" #i32
+
+[[register]]
+name = "DC current"
+register_number = 40500
+datatype = "u16"
+
+[[register]]
+name = "Total energy yield"
+register_number = 40560
+datatype = "u32"
+
+[[register]]
+name = "Yield today"
+register_number = 40562
+datatype = "u32"
+
+[[register]]
+name = "Today'spower generation hours"
+register_number = 40564
+datatype = "u32"
+
+[[register]]
+name = "Phase A current of grid"
+register_number = 40572
+datatype = "i16" #i16
+
+[[register]]
+name = "Phase B current of grid"
+register_number = 40573
+datatype = "i16" #i16
+
+[[register]]
+name = "Phase C current of grid"
+register_number = 40574
+datatype = "i16" #i16
+
+[[register]]
+name = "A-B line voltage of grid"
+register_number = 40575
+datatype = "u16"
+
+[[register]]
+name = "B-C line voltage of grid"
+register_number = 40576
+datatype = "u16"
+
+[[register]]
+name = "C-A line voltage of grid"
+register_number = 40577
+datatype = "u16"
+
+[[register]]
+name = "Inverter efficiency"
+register_number = 40685
+datatype = "u16"
+
+[[register]]
+name = "Local time"
+register_number = 40009
+datatype = "u32"
