@@ -32,7 +32,11 @@ Your `config.toml` relies on several Rust structures defined with `serde` for se
 
 - **`name`**: A human-readable name for the value.
 - **`register_number`**: The register number in the Modbus device where the value is read.
-- **`datatype`**: The type of data (`U16`, `U32`, `I16`, `I32`, `I64`).
+- **`datatype`**: Specifies the type of data and how it should be interpreted. For instance:
+  - `U16`, `U32`, `I16`, `I32`, `I64` indicate whether the data is unsigned (`U`) or signed (`I`) and the bit length. This is crucial as it determines how the program interprets the data in the registers.
+  - A `U16` data type means the value is unsigned and occupies a single 16-bit register.
+  - `U32` and `I32` types will be read from two consecutive 16-bit registers, and `I64` from four, given that each register is 16 bits in length.
+  - The program automatically handles the reading of multiple registers for `U32`, `I64`, etc., ensuring that data spanning multiple registers is correctly interpreted and combined.
 - **`gain`** (optional): The gain of the value, which the program will divide by. Defaults to `1`.
 
 ### Example Configuration 🌟
