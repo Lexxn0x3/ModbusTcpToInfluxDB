@@ -40,6 +40,7 @@ Your `config.toml` relies on several Rust structures defined with `serde` for se
 ```toml
 [modbus]
 ip = "10.18.40.60"
+port = 502 #optional
 uid = 0 #optional
 
 [influx]
