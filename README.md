@@ -1,6 +1,6 @@
 # ModbusTcpToInfluxDB 🔄
 
-Welcome to `ModbusTcpToInfluxDB`, the seamless bridge between Modbus TCP devices and InfluxDB database! 🌉 With this tool, you can capture data from any Modbus TCP device and store it in an InfluxDB database for monitoring, analysis, or any other purpose you might imagine. 📊✨
+Welcome to `ModbusTcpToInfluxDB`, the seamless bridge between Modbus TCP devices and InfluxDB database! 🌉 With this tool, you can capture data from any Modbus TCP device and store it in an InfluxDB database for monitoring, analysis, or any other purpose you might imagine. Works perfectly with Grafana.📊✨
 
 ## Configuration 🛠️
 
