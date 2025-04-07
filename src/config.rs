@@ -34,10 +34,15 @@ pub struct GeneralConfig {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct RegisterConfig {
     pub name: String,
+    #[serde(default = "default_function_code")]
+    pub function_code: u8,
     pub register_number: u16,
     pub datatype: DataType,
     #[serde(default = "default_gain")]
-    pub gain: u16,
+    pub gain: f32,
+}
+fn default_function_code() -> u8{
+    3
 }
 fn default_uid() -> u8{
     0
@@ -48,8 +53,8 @@ fn default_port_modbus() -> u16 {
 fn default_refresh_ms() -> u16 {
     2000 // Default Modbus TCP port
 }
-fn default_gain() -> u16 {
-    1
+fn default_gain() -> f32 {
+    1.0
 }
 fn default_log_level() -> LogLevel {Info}
 #[derive(Serialize, Deserialize, Debug)]

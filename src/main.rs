@@ -67,7 +67,7 @@ fn get_register_value(mut client: &mut Transport, register: &RegisterConfig) -> 
         DataType::U32 => Box::new(UInt32ReadStrategy)
     };
     // Use the selected strategy to read and format the register value
-    return strategy.read_and_format(register.register_number, &mut client);
+    return strategy.read_and_format(register.register_number, register.function_code, &mut client);
 }
 
 fn init_tcp_client(config: &Config, cfg: modbus::tcp::Config) -> Result<Transport, Result<(), Box<dyn Error>>> {
